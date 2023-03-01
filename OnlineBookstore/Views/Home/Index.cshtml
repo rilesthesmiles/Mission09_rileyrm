@@ -3,4 +3,17 @@
 *@
 @{
 }
+
+@model List<Book>
 <h1>Test</h1>
+
+@foreach (Book b in Model)
+{
+                <h3>@b.Title.</h3>
+                <ul>
+                    <li>@b.Author</li>
+                    <li>@b.Category.</li>
+                    <li>@b.PageCount</li>
+                    <li>@b.Price</li>
+                </ul>
+}
