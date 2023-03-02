@@ -24,7 +24,7 @@ namespace OnlineBookstore.Models.Infrastructure
         [HtmlAttributeNotBound]
         public ViewContext vc { get; set; }
 
-
+        //Setting up all the tag helpers
         public PageInfo PageBlah { get; set; }
         public string PageAction { get; set; }
 
@@ -36,7 +36,7 @@ namespace OnlineBookstore.Models.Infrastructure
 
 
 
-
+        //Writing a function for the tag helpers
         public override void Process(TagHelperContext thc, TagHelperOutput tho)
         {
             IUrlHelper uh = uhf.GetUrlHelper(vc);

@@ -13,6 +13,7 @@ namespace OnlineBookstore.Controllers
     {
         private IOnlineBookstoreRepository repo;
 
+        //Using the repository instead of the context file driectly
         public HomeController(IOnlineBookstoreRepository temp)
         {
             repo = temp;
@@ -22,6 +23,7 @@ namespace OnlineBookstore.Controllers
         {
             int pageSize = 10;
 
+            //Passing in both the info in the models as well as the page info
             var x = new BooksViewModel
             {
                 Books = repo.Books.OrderBy(p => p.Title)
