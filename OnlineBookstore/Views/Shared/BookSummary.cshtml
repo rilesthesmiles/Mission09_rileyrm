@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Book
+
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @Model.Title
+            <span class="badge badge-pill badge-primary" style="float:right">
+                <small>@Model.Price.ToString("c")</small>
+            </span>
+        </h4>
+    </div>
+
+    <table class="border-1">
+        <thread class="font-weight-bolder">
+            <tr>
+                <td class="card-text p-1 text-decoration-underline col-1"><u>Author</u></td>
+                <td class="card-text p-1 text-decoration-underline col-1"><u>Category</u></td>
+                <td class="card-text p-1 text-decoration-underline col-1"><u>Publisher</u></td>
+                <td class="card-text p-1 text-decoration-underline col-1"><u>Page Count</u></td>
+                <td class="card-text p-1 text-decoration-underline col-1"></td>
+            </tr>
+        </thread>
+
+        <tbody>
+            <tr>
+                <td class="card-text p-1 light">@Model.Author</td>
+                <td class="card-text p-1">@Model.Category</td>
+                <td class="card-text p-1">@Model.Publisher</td>
+                <td class="card-text p-1">@Model.PageCount</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--Making a comment to see if git checkout works-->
+
+
+</div>
