@@ -7,6 +7,11 @@
     <link href="/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+
+    <!--I added a background image and lowered the opacity. I had to mess with positioning a little to make it look right.-->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('/lib/img/zaini-izzuddin-55btQzyDiO8-unsplash.jpg'); background-size: cover; z-index: -1; opacity: 0.5;">
+        <div style="content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2);"></div>
+    </div>
     <div class="bg-dark text-white p-2">
         <span class="navbar-brand ml-2">BOOK STORE</span>
     </div>
@@ -18,5 +23,6 @@
             @RenderBody()
         </div>
     </div>
+
 </body>
 </html>
