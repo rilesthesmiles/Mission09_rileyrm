@@ -7,7 +7,7 @@
 @model Book
 
 
-<div class="card card-outline-primary m-1 p-1">
+<div class="card card-outline-primary m-1 p-1 gap-1">
     <div class="bg-faded p-1">
         <h4>
             @Model.Title
@@ -38,7 +38,15 @@
         </tbody>
     </table>
 
-    <!--Making a comment to see if git checkout works-->
 
+    <form method="post" asp-page="/Purchase">
+        <input type="hidden" asp-for="@Model.BookId" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+
+
+        <span class="card-text">
+            <button type="submit" class="btn btn-success btn-sm float-right">Purchase</button>
+        </span>
+    </form>
 
 </div>
