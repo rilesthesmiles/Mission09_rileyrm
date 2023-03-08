@@ -35,6 +35,7 @@ namespace OnlineBookstore
             });
 
             services.AddScoped<IOnlineBookstoreRepository, EFOnlineBookstoreRepository>();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -72,6 +73,8 @@ namespace OnlineBookstore
 
 
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
             });
         }
     }
