@@ -21,12 +21,15 @@ namespace OnlineBookstore.Controllers
 
 
 
+        //Accessing the checkout page
 
         [HttpGet]
         public IActionResult Checkout()
         {
             return View(new Purchase());
         }
+
+        //Checking out, also checking if the basket is empty or valid
 
         [HttpPost]
         public IActionResult Checkout(Purchase purchase)
